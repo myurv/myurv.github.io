@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl">
+  
+  
+  
+  
+  <title>Android EditText 限制输入两位小数 | MyBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Android EditText 限制输入两位小数:   Android EditText 限制输入两位小数为什么有这个需求这个需求其实很正常，就像用户个人信息有标准一样。比如说涉及到金钱的输入，客户端限制位数是肯定的。">
+<meta name="keywords" content="Android,View">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android EditText 限制输入两位小数">
+<meta property="og:url" content="http://myurv.github.io/2018/03/19/Android EditText 限制输入两位小数/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="Android EditText 限制输入两位小数:   Android EditText 限制输入两位小数为什么有这个需求这个需求其实很正常，就像用户个人信息有标准一样。比如说涉及到金钱的输入，客户端限制位数是肯定的。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-07T09:38:48.534Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android EditText 限制输入两位小数">
+<meta name="twitter:description" content="Android EditText 限制输入两位小数:   Android EditText 限制输入两位小数为什么有这个需求这个需求其实很正常，就像用户个人信息有标准一样。比如说涉及到金钱的输入，客户端限制位数是肯定的。">
+  
+    <link rel="alternative" href="/atom.xml" title="MyBlog" type="application/atom+xml">
+  
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet">
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1551932522566&amp;di=4f43155d9ebeefbf135f78a9d5ff35ee&amp;imgtype=0&amp;src=http%3A%2F%2Fimg3.100bt.com%2Fupload%2Fttq%2F20130407%2F1365347888788.jpeg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">赵志刚</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">欢迎常回来看看~</p>
+        
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives/">归档</a></li>
+                        
+                            <li><a href="/categories/">分类</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/myurv" title="github">github</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/View/" style="font-size: 10px;">View</a>
+                    </div>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">赵志刚</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1551932522566&amp;di=4f43155d9ebeefbf135f78a9d5ff35ee&amp;imgtype=0&amp;src=http%3A%2F%2Fimg3.100bt.com%2Fupload%2Fttq%2F20130407%2F1365347888788.jpeg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">赵志刚</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">欢迎常回来看看~</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">归档</a></li>
+                
+                    <li><a href="/categories/">分类</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/myurv" title="github">github</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-Android EditText 限制输入两位小数" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/19/Android EditText 限制输入两位小数/" class="article-date">
+      <time datetime="2018-03-18T16:00:00.000Z" itemprop="datePublished">2018-03-19</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android EditText 限制输入两位小数
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/view/">view</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/View/">View</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><strong> Android EditText 限制输入两位小数: </strong> <excerpt in index | 首页摘要></excerpt></p>
+<h1 id="Android-EditText-限制输入两位小数"><a href="#Android-EditText-限制输入两位小数" class="headerlink" title="Android EditText 限制输入两位小数"></a>Android EditText 限制输入两位小数</h1><h2 id="为什么有这个需求"><a href="#为什么有这个需求" class="headerlink" title="为什么有这个需求"></a>为什么有这个需求</h2><p>这个需求其实很正常，就像用户个人信息有标准一样。比如说涉及到金钱的输入，客户端限制位数是肯定的。</p>
+<a id="more"></a>
+<h2 id="功能分析"><a href="#功能分析" class="headerlink" title="功能分析"></a>功能分析</h2><ol>
+<li>首位输入 . 的时候补全为0.;</li>
+<li>删除 . 后2位数字；</li>
+<li>如果开始为0，第二位不是.，则后续无法输入。</li>
+</ol>
+<h2 id="TextWatcher-方案"><a href="#TextWatcher-方案" class="headerlink" title="TextWatcher 方案"></a>TextWatcher 方案</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">public class DataTextWatcher implements TextWatcher &#123;</span><br><span class="line">    private EditText editText;</span><br><span class="line">    private int digits = 2;</span><br><span class="line"></span><br><span class="line">    public DataTextWatcher(EditText et) &#123;</span><br><span class="line">        editText = et;</span><br><span class="line">    &#125;</span><br><span class="line">    public DataTextWatcher setDigits(int d) &#123;</span><br><span class="line">        digits = d;</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void beforeTextChanged(CharSequence s, int start, int count, int after) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onTextChanged(CharSequence s, int start, int before, int count) &#123;</span><br><span class="line">        //删除“.”后面超过2位后的数据</span><br><span class="line">        if (s.toString().contains(&quot;.&quot;)) &#123;</span><br><span class="line">            if (s.length() - 1 - s.toString().indexOf(&quot;.&quot;) &gt; digits) &#123;</span><br><span class="line">                s = s.toString().subSequence(0,</span><br><span class="line">                        s.toString().indexOf(&quot;.&quot;) + digits+1);</span><br><span class="line">                editText.setText(s);</span><br><span class="line">                editText.setSelection(s.length()); //光标移到最后</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        //如果&quot;.&quot;在起始位置,则起始位置自动补0</span><br><span class="line">        if (s.toString().trim().substring(0).equals(&quot;.&quot;)) &#123;</span><br><span class="line">            s = &quot;0&quot; + s;</span><br><span class="line">            editText.setText(s);</span><br><span class="line">            editText.setSelection(2);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //如果起始位置为0,且第二位跟的不是&quot;.&quot;,则无法后续输入</span><br><span class="line">        if (s.toString().startsWith(&quot;0&quot;)</span><br><span class="line">                &amp;&amp; s.toString().trim().length() &gt; 1) &#123;</span><br><span class="line">            if (!s.toString().substring(1, 2).equals(&quot;.&quot;)) &#123;</span><br><span class="line">                editText.setText(s.subSequence(0, 1));</span><br><span class="line">                editText.setSelection(1);</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void afterTextChanged(Editable s) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注释很明了了，一看就懂，使用方法也很简单</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/03/19/Android EditText 限制输入两位小数/">Android EditText 限制输入两位小数</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 赵志刚 的个人博客">赵志刚</a></p>
+        <p><span>发布时间:</span>2018年03月19日 - 00时00分</p>
+        <p><span>最后更新:</span>2019年03月07日 - 17时38分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/03/19/Android EditText 限制输入两位小数/" title="Android EditText 限制输入两位小数">http://myurv.github.io/2018/03/19/Android EditText 限制输入两位小数/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://myurv.github.io/2018/03/19/Android EditText 限制输入两位小数/　　作者: 赵志刚" title></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/03/28/Markdown简单学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Markdown简单学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/12/Android TextView设置字数限制/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android TextView设置字数限制</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Android-EditText-限制输入两位小数"><span class="toc-number">1.</span> <span class="toc-text">Android EditText 限制输入两位小数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么有这个需求"><span class="toc-number">1.1.</span> <span class="toc-text">为什么有这个需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#功能分析"><span class="toc-number">1.2.</span> <span class="toc-text">功能分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TextWatcher-方案"><span class="toc-number">1.3.</span> <span class="toc-text">TextWatcher 方案</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/03/28/Markdown简单学习/" title="上一篇: Markdown简单学习">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/03/12/Android TextView设置字数限制/" title="下一篇: Android TextView设置字数限制">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/28/Markdown简单学习/">Markdown简单学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/19/Android EditText 限制输入两位小数/">Android EditText 限制输入两位小数</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/Android TextView设置字数限制/">Android TextView设置字数限制</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 赵志刚
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

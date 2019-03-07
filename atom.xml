@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MyBlog</title>
+  
+  <subtitle>欢迎常回来看看~</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://myurv.github.io/"/>
+  <updated>2019-03-07T08:04:20.638Z</updated>
+  <id>http://myurv.github.io/</id>
+  
+  <author>
+    <name>赵志刚</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markdown简单学习</title>
+    <link href="http://myurv.github.io/2018/03/28/Markdown%E7%AE%80%E5%8D%95%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://myurv.github.io/2018/03/28/Markdown简单学习/</id>
+    <published>2018-03-27T16:00:00.000Z</published>
+    <updated>2019-03-07T08:04:20.638Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单的Markdown语法，稍微花点时间整理下，免得用的时候忘记还得各种查找。</p><a id="more"></a><h3 id="1-斜体和粗体"><a href="#1-斜体和粗体" class="headerlink" title="1.斜体和粗体"></a>1.斜体和粗体</h3><p><em>斜体</em><br><strong>粗体</strong></p><h3 id="2-分级标题"><a href="#2-分级标题" class="headerlink" title="2.分级标题"></a>2.分级标题</h3><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h3 id="3-外链接"><a href="#3-外链接" class="headerlink" title="3.外链接"></a>3.外链接</h3><p><a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#cmd-markdown" target="_blank" rel="noopener">语法学习地址</a></p><h3 id="4-无序列表"><a href="#4-无序列表" class="headerlink" title="4.无序列表"></a>4.无序列表</h3><ul><li>无序列表项一</li><li>无序列表项二</li></ul><ul><li>无序</li></ul><ul><li>无序四</li></ul><h3 id="5-有序列表"><a href="#5-有序列表" class="headerlink" title="5.有序列表"></a>5.有序列表</h3><ol><li>有序一</li><li>有序二</li></ol><h3 id="6-文字引用"><a href="#6-文字引用" class="headerlink" title="6.文字引用"></a>6.文字引用</h3><blockquote><p>黑云压城城欲摧</p></blockquote><h3 id="7-行内代码块"><a href="#7-行内代码块" class="headerlink" title="7.行内代码块"></a>7.行内代码块</h3><p><code>java</code></p><h3 id="8-代码块"><a href="#8-代码块" class="headerlink" title="8.代码块"></a>8.代码块</h3><pre><code>代码块</code></pre><h3 id="9-插入图片"><a href="#9-插入图片" class="headerlink" title="9.插入图片"></a>9.插入图片</h3><p><img src="https://www.zybuluo.com/static/img/my_head.jpg" alt="头像"></p><h1 id="Markdown进阶学习"><a href="#Markdown进阶学习" class="headerlink" title="Markdown进阶学习"></a>Markdown进阶学习</h1><h3 id="1-内容目录"><a href="#1-内容目录" class="headerlink" title="1.内容目录"></a>1.内容目录</h3><p>[TOC]</p><h3 id="2-删除线"><a href="#2-删除线" class="headerlink" title="2.删除线"></a>2.删除线</h3><p><del>这是一句废话</del></p><h3 id="3-注脚"><a href="#3-注脚" class="headerlink" title="3.注脚"></a>3.注脚</h3><p>注脚<a href="注脚">^footnote</a></p><h3 id="4-代码块"><a href="#4-代码块" class="headerlink" title="4.代码块"></a>4.代码块</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="5-表格"><a href="#5-表格" class="headerlink" title="5.表格"></a>5.表格</h3><table><thead><tr><th>项目</th><th style="text-align:right">价格</th><th style="text-align:center">数量</th></tr></thead><tbody><tr><td>计算机</td><td style="text-align:right">$1600</td><td style="text-align:center">5</td></tr></tbody></table><h3 id="5-定义型列表"><a href="#5-定义型列表" class="headerlink" title="5.定义型列表"></a>5.定义型列表</h3><p>名词解释<br>:    定义1<br>:    定义2</p><h3 id="6-HTML标签"><a href="#6-HTML标签" class="headerlink" title="6.HTML标签"></a>6.HTML标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;th rowspan=&quot;2&quot;&gt;值班人员&lt;/th&gt;</span><br><span class="line">        &lt;th&gt;星期一&lt;/th&gt;</span><br><span class="line">        &lt;th&gt;星期二&lt;/th&gt;</span><br><span class="line">        &lt;th&gt;星期三&lt;/th&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;李强&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;张明&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;王平&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure><h3 id="7-内嵌图标"><a href="#7-内嵌图标" class="headerlink" title="7.内嵌图标"></a>7.内嵌图标</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class=&quot;icon-weibo&quot;&gt;&lt;/i&gt;</span><br><span class="line">&lt;i class=&quot;icon-renren&quot;&gt;&lt;/i&gt;</span><br></pre></td></tr></table></figure><h3 id="8-待办"><a href="#8-待办" class="headerlink" title="8.待办"></a>8.待办</h3><ul><li style="list-style: none"><input type="checkbox"> <strong>随便写</strong><ul><li style="list-style: none"><input type="checkbox"> sss</li><li style="list-style: none"><input type="checkbox" checked> sss</li></ul></li><li style="list-style: none"><input type="checkbox"> sss<ul><li style="list-style: none"><input type="checkbox"> sss</li><li style="list-style: none"><input type="checkbox" checked> sss</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;简单的Markdown语法，稍微花点时间整理下，免得用的时候忘记还得各种查找。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android EditText 限制输入两位小数</title>
+    <link href="http://myurv.github.io/2018/03/19/Android%20EditText%20%E9%99%90%E5%88%B6%E8%BE%93%E5%85%A5%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0/"/>
+    <id>http://myurv.github.io/2018/03/19/Android EditText 限制输入两位小数/</id>
+    <published>2018-03-18T16:00:00.000Z</published>
+    <updated>2019-03-07T09:38:48.534Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong> Android EditText 限制输入两位小数: </strong> <excerpt in index | 首页摘要></excerpt></p><h1 id="Android-EditText-限制输入两位小数"><a href="#Android-EditText-限制输入两位小数" class="headerlink" title="Android EditText 限制输入两位小数"></a>Android EditText 限制输入两位小数</h1><h2 id="为什么有这个需求"><a href="#为什么有这个需求" class="headerlink" title="为什么有这个需求"></a>为什么有这个需求</h2><p>这个需求其实很正常，就像用户个人信息有标准一样。比如说涉及到金钱的输入，客户端限制位数是肯定的。</p><a id="more"></a><h2 id="功能分析"><a href="#功能分析" class="headerlink" title="功能分析"></a>功能分析</h2><ol><li>首位输入 . 的时候补全为0.;</li><li>删除 . 后2位数字；</li><li>如果开始为0，第二位不是.，则后续无法输入。</li></ol><h2 id="TextWatcher-方案"><a href="#TextWatcher-方案" class="headerlink" title="TextWatcher 方案"></a>TextWatcher 方案</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">public class DataTextWatcher implements TextWatcher &#123;</span><br><span class="line">    private EditText editText;</span><br><span class="line">    private int digits = 2;</span><br><span class="line"></span><br><span class="line">    public DataTextWatcher(EditText et) &#123;</span><br><span class="line">        editText = et;</span><br><span class="line">    &#125;</span><br><span class="line">    public DataTextWatcher setDigits(int d) &#123;</span><br><span class="line">        digits = d;</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void beforeTextChanged(CharSequence s, int start, int count, int after) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onTextChanged(CharSequence s, int start, int before, int count) &#123;</span><br><span class="line">        //删除“.”后面超过2位后的数据</span><br><span class="line">        if (s.toString().contains(&quot;.&quot;)) &#123;</span><br><span class="line">            if (s.length() - 1 - s.toString().indexOf(&quot;.&quot;) &gt; digits) &#123;</span><br><span class="line">                s = s.toString().subSequence(0,</span><br><span class="line">                        s.toString().indexOf(&quot;.&quot;) + digits+1);</span><br><span class="line">                editText.setText(s);</span><br><span class="line">                editText.setSelection(s.length()); //光标移到最后</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        //如果&quot;.&quot;在起始位置,则起始位置自动补0</span><br><span class="line">        if (s.toString().trim().substring(0).equals(&quot;.&quot;)) &#123;</span><br><span class="line">            s = &quot;0&quot; + s;</span><br><span class="line">            editText.setText(s);</span><br><span class="line">            editText.setSelection(2);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //如果起始位置为0,且第二位跟的不是&quot;.&quot;,则无法后续输入</span><br><span class="line">        if (s.toString().startsWith(&quot;0&quot;)</span><br><span class="line">                &amp;&amp; s.toString().trim().length() &gt; 1) &#123;</span><br><span class="line">            if (!s.toString().substring(1, 2).equals(&quot;.&quot;)) &#123;</span><br><span class="line">                editText.setText(s.subSequence(0, 1));</span><br><span class="line">                editText.setSelection(1);</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void afterTextChanged(Editable s) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注释很明了了，一看就懂，使用方法也很简单</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt; Android EditText 限制输入两位小数: &lt;/strong&gt; &lt;excerpt in index | 首页摘要&gt;&lt;/excerpt&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Android-EditText-限制输入两位小数&quot;&gt;&lt;a href=&quot;#Android-EditText-限制输入两位小数&quot; class=&quot;headerlink&quot; title=&quot;Android EditText 限制输入两位小数&quot;&gt;&lt;/a&gt;Android EditText 限制输入两位小数&lt;/h1&gt;&lt;h2 id=&quot;为什么有这个需求&quot;&gt;&lt;a href=&quot;#为什么有这个需求&quot; class=&quot;headerlink&quot; title=&quot;为什么有这个需求&quot;&gt;&lt;/a&gt;为什么有这个需求&lt;/h2&gt;&lt;p&gt;这个需求其实很正常，就像用户个人信息有标准一样。比如说涉及到金钱的输入，客户端限制位数是肯定的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="view" scheme="http://myurv.github.io/categories/view/"/>
+    
+    
+      <category term="Android" scheme="http://myurv.github.io/tags/Android/"/>
+    
+      <category term="View" scheme="http://myurv.github.io/tags/View/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android TextView设置字数限制</title>
+    <link href="http://myurv.github.io/2018/03/12/Android%20TextView%E8%AE%BE%E7%BD%AE%E5%AD%97%E6%95%B0%E9%99%90%E5%88%B6/"/>
+    <id>http://myurv.github.io/2018/03/12/Android TextView设置字数限制/</id>
+    <published>2018-03-11T16:00:00.000Z</published>
+    <updated>2019-03-07T08:16:12.597Z</updated>
+    
+    <content type="html"><![CDATA[<p>TextView可以设置最大显示字数，其余以省略号显示</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;TextView</span><br><span class="line">    android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">    android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">    android:text=&quot;哈哈哈哈哈哈哈哈哈哈哈哈哈&quot;</span><br><span class="line">    android:singleLine=&quot;true&quot;</span><br><span class="line">    android:maxEms=&quot;4&quot;</span><br><span class="line">    android:ellipsize=&quot;end&quot;</span><br><span class="line">    android:textSize=&quot;14px&quot;</span><br><span class="line">    android:textColor=&quot;@color/colorText&quot;</span><br><span class="line">    /&gt;</span><br></pre></td></tr></table></figure><pre><code>主要是设置三个属性：</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">android:singleLine=&quot;true&quot; //已经过时</span><br><span class="line">android:maxLines=&quot;1&quot; </span><br><span class="line">android:maxEms=&quot;8&quot; //最大字符数</span><br><span class="line">android:ellipsize=&quot;end&quot; //省略号显示位置</span><br></pre></td></tr></table></figure><pre><code>android:ellipsize=”start”—–省略号显示在开头 &quot;...pedia&quot;android:ellipsize=”end”——省略号显示在结尾  &quot;encyc...&quot;android:ellipsize=”middle”—-省略号显示在中间 &quot;en...dia&quot;android:ellipsize=”marquee”–以横向滚动方式显示(需获得当前焦点时)</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;TextView可以设置最大显示字数，其余以省略号显示&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
